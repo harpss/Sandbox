@@ -2,7 +2,8 @@ scores = []
 
 result_f = open("results.txt")
 for line in result_f:
-    scores.append(line)
+    (name, score) = line.split()
+    scores.append(float(score))
 result_f.close()
 
 print (scores[0])
